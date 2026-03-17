@@ -52,6 +52,6 @@ Our results agree with the main conclusions already published for the original H
 
 The two variations give almost identical heatmaps. In our simulation, each successful match removes three cards, so scoring by cards won is just a constant multiple of scoring by tricks. Since multiplying the score by a constant does not change which player wins or whether the game ends in a tie, the overall win and draw probabilities remain the same. Therefore, both variations show the same overall pattern.
 
-### Optimal strategies for players 1 and 2 in each variation
+### Optimal strategies for Player 1 and 2 in each variation
 
 For Player 2, the optimal strategy is to choose the best counter-sequence after seeing Player 1’s choice. Based on our heatmaps, some of the strongest responses are BRR or RRB against BBB (about 100%), RBB against BBR (about 97%), and BBR against BRB (about 91%). For Player 1, the best strategy is to choose an opening sequence that makes Player 2’s strongest response as weak as possible. In our results, BRR and RBB appear to be the best opening choices, since Player 2’s best winning probability against them is lower than for the other starting sequences. Because the two variations give the same overall probabilities, the optimal strategies are the same in both versions. 
