@@ -42,9 +42,10 @@ If choice 2 is selected, you will be prompted to visualize additional decks alon
 
 ## Discussion of findings
 
-Our simulation results show a clear non-transitive structure in both variations of the game. In other words, no single 3-symbol sequence is universally best. Instead, the strength of a choice depends on the opponent’s choice. Based on our heatmaps, some sequences perform very well against certain opponents but poorly against others. Our results also show a strong advantage for Player 2, since the second player can choose a response after seeing Player 1’s sequence and often achieve a much higher probability of winning. Overall, our simulations suggest that the game is driven by counter-strategy rather than by one universally dominant sequence.
+Our simulation results show clear patterns in both versions of the game. The heatmaps suggest that no single sequence is always the best choice. Instead, the result depends on which sequence it is matched against. This means the game depends on strategy and counter-strategy, and our results also suggest that Player 2 usually has an advantage because they can respond after seeing Player 1’s choice.
 
 ### comparison with original H–N game
+
 
 
 ### comparison between the two variations
