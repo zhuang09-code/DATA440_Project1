@@ -1,4 +1,4 @@
-# DATA440_Project1_Penny
+# DATA440_Project1_Penney
 
 ## Project Overview
 
@@ -26,7 +26,7 @@ We simulate two scoring rules:
 
 ## How to run the project
 
-from the repository root, run:
+From the repository root, run:
 
 ```bash
 uv run main.py
@@ -42,13 +42,16 @@ If choice 2 is selected, you will be prompted to visualize additional decks alon
 
 ## Discussion of findings
 
-Our simulation results show clear patterns in both versions of the game. The heatmaps suggest that no single sequence is always the best choice. Instead, the result depends on which sequence it is matched against. This means the game depends on strategy and counter-strategy, and our results also suggest that Player 2 usually has an advantage because they can respond after seeing Player 1’s choice.
+Our simulation results show clear patterns in both versions of the game. The heatmaps suggest that no single sequence is always the best choice. Instead, the result depends on which sequence it is matched against. Overall, our results show that the game depends on strategy and counter-strategy, with Player 2 generally having an advantage.
 
-### comparison with original H–N game
+### Comparison with original H–N game
 
+Our results agree with the main conclusions already published for the original H–N game. Like the original game, our simulations show that there is no single sequence that always wins, and Player 2 usually has an advantage because they can choose a counter-sequence after seeing Player 1’s choice. Our heatmaps support this pattern, since each starting sequence has a stronger response from the second player.
 
+### Comparison between the two variations
 
-### comparison between the two variations
+The two variations give almost identical heatmaps. In our simulation, each successful match removes three cards, so scoring by cards won is just a constant multiple of scoring by tricks. Since multiplying the score by a constant does not change which player wins or whether the game ends in a tie, the overall win and draw probabilities remain the same. Therefore, both variations show the same overall pattern.
 
+### Optimal strategies for players 1 and 2 in each variation
 
-### optimal strategies for players 1 and 2 in each variation
+For Player 2, the optimal strategy is to choose the best counter-sequence after seeing Player 1’s choice. Based on our heatmaps, some of the strongest responses are BRR or RRB against BBB (about 100%), RBB against BBR (about 97%), and BBR against BRB (about 91%). For Player 1, the best strategy is to choose an opening sequence that makes Player 2’s strongest response as weak as possible. In our results, BRR and RBB appear to be the best opening choices, since Player 2’s best winning probability against them is lower than for the other starting sequences. Because the two variations give the same overall probabilities, the optimal strategies are the same in both versions. 
