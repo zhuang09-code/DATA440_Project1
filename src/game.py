@@ -36,23 +36,26 @@ def play_game(deck: np.ndarray, p1: str, p2: str, scoring: str = "tricks") -> tu
     p2_score = 0
     i = 0
 
-    while i <= len(cards)-3:
+    while i <= len(cards) - 3:
         check = cards[i:i+3]
-        if check == p1_list: 
-            if scoring == "tricks":
-                p1_score += 1
-            else:  # scoring == "cards"
-                p1_score += 3
-            del cards[i:i+3]
+
+        if check == p1_list or check == p2_list:
+            k = i + 3  # cards consumed up to and including the match
+
+            if check == p1_list:
+                if scoring == "tricks":
+                    p1_score += 1
+                else:  # scoring == "cards"
+                    p1_score += k
+            else:  # check == p2_list
+                if scoring == "tricks":
+                    p2_score += 1
+                else:  # scoring == "cards"
+                    p2_score += k
+
+            del cards[:k]  # remove consumed prefix
             i = 0
-        elif check == p2_list: 
-            if scoring == "tricks":
-                p2_score += 1
-            else:  # scoring == "cards"
-                p2_score += 3
-            del cards[i:i+3]
-            i = 0
-        else: 
+        else:
             i += 1
 
     return p1_score, p2_score
