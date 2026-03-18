@@ -50,7 +50,7 @@ Our results agree with the main conclusions already published for the original H
 
 ### Comparison between the two variations
 
-The two variations produce different heatmaps. For scoring using tricks, each match is worth 1 point, so outcomes depend on how many matches each player gets. For scoring using cards, the winner of a match earns the number of cards consumed up to that match (i.e., i+3 cards), so the value of a match depends on where it occurs in the scan. This changes win and tie probabilities: the cards version generally shows much lower draw rates (often around 0–4%) than the tricks version, and several matchups shift noticeably in win probability.
+The two variations produce different heatmaps. For scoring using tricks, each match is worth 1 point, so outcomes depend on how many matches each player gets. For scoring using cards, the winner of a match earns the number of cards consumed up to that match, so the value of a match depends on where it occurs in the scan. This changes win and tie probabilities: the cards version generally shows much lower draw rates (often around 0–4%) than the tricks version, and several matchups shift noticeably in win probability.
 
 ### Optimal strategies for Player 1 and 2 in each variation
 
