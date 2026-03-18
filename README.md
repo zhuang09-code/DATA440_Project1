@@ -46,12 +46,15 @@ Our simulation results show clear patterns in both versions of the game. The hea
 
 ### Comparison with original H–N game
 
-Our results agree with the main conclusions already published for the original H–N game. Like the original game, our simulations show that there is no single sequence that always wins, and Player 2 usually has an advantage because they can choose a counter-sequence after seeing Player 1’s choice. Our heatmaps support this pattern, since each starting sequence has a stronger response from the second player.
+Our results agree with the main conclusions already published for the original H–N game. Like the original game, our simulations show that there is no single sequence that always wins, and Player 2 often can respond with a strong counter because they can choose a counter-sequence after seeing Player 1’s choice. Our heatmaps support this pattern, since each starting sequence has a stronger response from the second player.
 
 ### Comparison between the two variations
 
-The two variations give almost identical heatmaps. In our simulation, each successful match removes three cards, so scoring by cards won is just a constant multiple of scoring by tricks. Since multiplying the score by a constant does not change which player wins or whether the game ends in a tie, the overall win and draw probabilities remain the same. Therefore, both variations show the same overall pattern.
+The two variations produce different heatmaps. For scoring using tricks, each match is worth 1 point, so outcomes depend on how many matches each player gets. For scoring using cards, the winner of a match earns the number of cards consumed up to that match (i.e., i+3 cards), so the value of a match depends on where it occurs in the scan. This changes win and tie probabilities: the cards version generally shows much lower draw rates (often around 0–4%) than the tricks version, and several matchups shift noticeably in win probability.
 
 ### Optimal strategies for Player 1 and 2 in each variation
 
-For Player 2, the optimal strategy is to choose the best counter-sequence after seeing Player 1’s choice. Based on our heatmaps, some of the strongest responses are BRR or RRB against BBB (about 100%), RBB against BBR (about 97%), and BBR against BRB (about 91%). For Player 1, the best strategy is to choose an opening sequence that makes Player 2’s strongest response as weak as possible. In our results, BRR and RBB appear to be the best opening choices, since Player 2’s best winning probability against them is lower than for the other starting sequences. Because the two variations give the same overall probabilities, the optimal strategies are the same in both versions. 
+For Player 2, the best response depends on Player 1’s chosen sequence. From each heatmap, Player 2’s optimal counter to a given Player 1 choice can be identified by finding the row that minimizes Player 1’s win probability in that column.
+
+For Player 1, the best strategy is to choose an opening sequence whose worst-case matchup is as strong as possible. Operationally, this means comparing the minimum Win% in each column and selecting the column with the largest minimum (a maximin-style choice).
+
