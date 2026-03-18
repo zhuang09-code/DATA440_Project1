@@ -56,5 +56,5 @@ The two variations produce different heatmaps. For scoring using tricks, each ma
 
 For Player 2, the best response depends on Player 1’s chosen sequence. From each heatmap, Player 2’s optimal counter to a given Player 1 choice can be identified by finding the row that minimizes Player 1’s win probability in that column.
 
-For Player 1, the best strategy is to choose an opening sequence whose worst-case matchup is as strong as possible. Operationally, this means comparing the minimum Win% in each column and selecting the column with the largest minimum (a maximin-style choice).
+For Player 1, the best strategy is to choose an opening sequence whose worst-case matchup is as strong as possible. This means comparing the minimum Win% in each column and selecting the column with the largest minimum (a maximin-style choice).
 
