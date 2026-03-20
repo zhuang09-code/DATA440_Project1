@@ -26,7 +26,7 @@ def processed() -> None:
 
             # Current heatmap #1 by original scoring
             create_heatmap(data=G1WIN,
-                           title = f"My Chance of Win(Draw)\nTricks\nN={n_t}",
+                           title = f"My Chance of Win(Draw)\nTricks\nN={n_t:,}",
                            x_label = "My Choice",
                            y_label = "Opponent Choice",
                            annot_data=ANNOT1,
@@ -34,7 +34,7 @@ def processed() -> None:
             
             # Current heatmap #2 by Ron's scoring
             create_heatmap(data=G2WIN,
-                           title = f"My Chance of Win(Draw)\nCards\nN={n_c}",
+                           title = f"My Chance of Win(Draw)\nCards\nN={n_c:,}",
                            x_label = "My Choice",
                            y_label = "Opponent Choice",
                            annot_data=ANNOT2,
@@ -67,7 +67,7 @@ def processed() -> None:
 
             # New heatmap #1 by original scoring
             create_heatmap(data=G1WIN,
-                           title = f"My Chance of Win(Draw)\nTricks\nN={n_t}",
+                           title = f"My Chance of Win(Draw)\nTricks\nN={n_t:,}",
                            x_label = "My Choice",
                            y_label = "Opponent Choice",
                            annot_data=ANNOT1,
@@ -75,7 +75,7 @@ def processed() -> None:
             
             # New heatmap #2 by Ron's scoring
             create_heatmap(data=G2WIN,
-                           title = f"My Chance of Win(Draw)\nCards\nN={n_c}",
+                           title = f"My Chance of Win(Draw)\nCards\nN={n_c:,}",
                            x_label = "My Choice",
                            y_label = "Opponent Choice",
                            annot_data=ANNOT2,
